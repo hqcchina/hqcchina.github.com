@@ -44,7 +44,7 @@ h2. 联系我
 * QQ：373216707
 * Email、Apple ID：hqc2010[@]gmail.com
 * 微博（Weibo Sina）: <a href='http://weibo.com/u/2368449022'>@云景Neil</a>
-* 博客（Blog）: <a href='http://yunjing.me'>http://yunjing.me</a>
+* 博客（Blog）: <a href='http://www.yunjing.me'>http://www.yunjing.me</a>
 
 h2. Github项目
 
