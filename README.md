@@ -1,7 +1,7 @@
 云景
 =======
 
-博客源码：[http://yunjing.me](http://yunjing.me)
+博客源码：[http://www.yunjing.me](http://www.yunjing.me)
 
 使用Github + Jekyll + Markdown。
 
@@ -26,8 +26,8 @@ Jekyll生成的静态网页所以不能使用类似于Wordpress的插件提供�
 ===
 
 * Fork本项目
-* 删除_posts目录
-* 删除files目录
-* 删除download目录
+* 删除_posts目录下的所有内容
+* 删除files目录下的所有内容
+* 删除download目录下的所有内容
 * 各文件检查并修改为自己的信息
 * 提交并push至GitHub即可
