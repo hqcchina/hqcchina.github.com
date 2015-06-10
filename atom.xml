@@ -4,23 +4,23 @@ layout: nil
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
  
- <title>咖啡兔</title>
- <link href="http://www.kafeitu.me/atom.xml" rel="self"/>
- <link href="http://www.kafeitu.me/"/>
+ <title>云景</title>
+ <link href="http://yunjing.me/atom.xml" rel="self"/>
+ <link href="http://yunjing.me/"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>http://www.kafeitu.me/</id>
+ <id>http://yunjing.me/</id>
  <author>
-   <name>咖啡兔</name>
-   <email>yanhonglei@gmail.com</email>
+   <name>云景</name>
+   <email>hqc2010@gmail.com</email>
  </author>
  
  {% for post in site.posts limit:15 %}
  <entry>
    <title>{{ post.title }}</title>
-   <link href="http://www.kafeitu.me{{ post.url }}"/>
+   <link href="http://yunjing.me{{ post.url }}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
-   <id>http://www.kafeitu.me{{ post.id }}</id>
-   <content type="html">{{ post.content | xml_escape }}<strong>原创文章，转载请注明：</strong>转载自：<a href='http://www.kafeitu.me{{post.url}}'>{{post.title}}</a></content>
+   <id>http://yunjing.me{{ post.id }}</id>
+   <content type="html">{{ post.content | xml_escape }}<strong>原创文章，转载请注明：</strong>转载自：<a href='http://yunjing.me{{post.url}}'>{{post.title}}</a></content>
  </entry>
  {% endfor %}
  
