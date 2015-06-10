@@ -1,8 +1,8 @@
 --- 
 layout: post
 title: "关于WEB开发中引入javascript文件方式的一点建议"
-wordpress_id: 12
-wordpress_url: http://wsria.com/?p=12
+wordpress_id: 1
+wordpress_url: http://www.yunjing.me/?p=1
 date: 2009-02-07 18:24:46 +08:00
 category: javascript
 tags: 
