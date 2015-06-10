@@ -1,4 +1,4 @@
-咖啡兔
+云景
 =======
 
 博客源码：[http://yunjing.me](http://yunjing.me)
@@ -25,4 +25,9 @@ Jekyll生成的静态网页所以不能使用类似于Wordpress的插件提供�
 基于本主题搭建博客：
 ===
 
-Fork本项目，然后删除_posts目录的文件，修改项目中的配置信息为自己的并push到github即可。
+* Fork本项目
+* 删除_posts目录
+* 删除files目录
+* 删除download目录
+* 各文件检查并修改为自己的信息
+* 提交并push至GitHub即可
