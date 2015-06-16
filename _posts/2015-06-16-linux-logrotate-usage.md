@@ -75,8 +75,8 @@ create : 自动创建新的日志文件；
 missingok : 表示如果找不到log也不用报错；  
 
 delaycompress : 表示延后压缩直至下一次rorate；  
-
 copytruncate : 表示先复制日志内容后再清空，与之相对是create方法；  
+dateext : 表示以日期作为后缀，默认以数字1、2、3等作为后缀；  
 
 这里的设置可以理解为logrotate的缺省值，当然了，可以我们在「/etc/logrotate.d」目录里放置自己的配置文件，用来覆盖logrotate的缺省值。
 
