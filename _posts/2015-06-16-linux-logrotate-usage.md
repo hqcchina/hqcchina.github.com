@@ -11,7 +11,7 @@ tags:
 ---
 我发现很多人的服务器上都运行着一些诸如每天切分Nginx日志之类的CRON脚本，大家似乎遗忘了logrotate，争先发明自己的轮子，这真是让人沮丧啊！就好比明明身边躺着现成的性感美女，大家却忙着自娱自乐，罪过！
 
-<strong>logrotate介绍</strong>
+### logrotate介绍
 显而易见，logrorate是基于CRON来运行的，其脚本是「/etc/cron.daily/logrotate」：
 <!--more-->
 <pre class="brush: shell" line="1">
@@ -57,7 +57,7 @@ include /etc/logrotate.d
 
 这里的设置可以理解为Logrotate的缺省值，当然了，可以我们在「/etc/logrotate.d」目录里放置自己的配置文件，用来覆盖Logrotate的缺省值。
 
-<strong>logrotate演示</strong>
+### logrotate演示
 按天保存一周的Nginx日志压缩文件，配置文件为「/etc/logrotate.d/nginx」：
 <!--more-->
 <pre class="brush: conf" line="1">
@@ -84,16 +84,16 @@ include /etc/logrotate.d
 </pre>
 BTW：类似的还有Verbose选项，这里就不多说了。
 
-<strong>logrotate问答</strong>
-问题：sharedscripts的作用是什么？
+### logrotate问答
+#### 问题：sharedscripts的作用是什么？
 
 大家可能注意到了，我在前面Nginx的例子里声明日志文件的时候用了星号通配符，也就是说这里可能涉及多个日志文件，比如：access.log和error.log。说到这里大家或许就明白了，sharedscripts的作用是在所有的日志文件都轮转完毕后统一执行一次脚本。如果没有配置这条指令，那么每个日志文件轮转完毕后都会执行一次脚本。
 
-问题：rotate和maxage的区别是什么？
+#### 问题：rotate和maxage的区别是什么？
 
 它们都是用来控制保存多少日志文件的，区别在于rotate是以个数为单位的，而maxage是以天数为单位的。如果我们是以按天来轮转日志，那么二者的差别就不大了。
 
-问题：为什么生成日志的时间是凌晨四五点？
+#### 问题：为什么生成日志的时间是凌晨四五点？
 
 前面我们说过，Logrotate是基于CRON运行的，所以这个时间是由CRON控制的，具体可以查询CRON的配置文件「/etc/crontab」，可以手动改成如23:59等时间执行：
 <!--more-->
@@ -111,7 +111,7 @@ HOME=/
 </pre>
 如果使用的是新版CentOS，那么配置文件为：/etc/anacrontab。
 
-问题：如何告诉应用程序重新打开日志文件？
+#### 问题：如何告诉应用程序重新打开日志文件？
 
 以Nginx为例，是通过postrotate指令发送USR1信号来通知Nginx重新打开日志文件的。但是其他的应用程序不一定遵循这样的约定，比如说MySQL是通过flush-logs来重新打开日志文件的。更有甚者，有些应用程序就压根没有提供类似的方法，此时如果想重新打开日志文件，就必须重启服务，但为了高可用性，这往往不能接受。还好Logrotate提供了一个名为copytruncate的指令，此方法采用的是先拷贝再清空的方式，整个过程中日志文件的操作句柄没有发生改变，所以不需要通知应用程序重新打开日志文件，但是需要注意的是，在拷贝和清空之间有一个时间差，所以可能会丢失部分日志数据。
 
