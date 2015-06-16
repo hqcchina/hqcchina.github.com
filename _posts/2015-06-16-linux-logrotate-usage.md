@@ -59,14 +59,23 @@ include /etc/logrotate.d
 </pre>
 
 简单说明：
+
 weekly : 所有的日志文件每周转储一次，也可以是每日daily或每月monthly；  
+
 rotate 4 : 表示保留4份；  
+
 compress : 表示压缩每一份日志文件，默认使用gzip压缩；  
+
 notifempty : 如果是空文件的话，不转储；  
+
 postrotate/endscript : 日志转储后执行的脚本；  
+
 create : 自动创建新的日志文件；  
+
 missingok : 表示如果找不到log也不用报错；  
+
 delaycompress : 表示延后压缩直至下一次rorate；  
+
 copytruncate : 表示先复制日志内容后再清空，与之相对是create方法；  
 
 这里的设置可以理解为logrotate的缺省值，当然了，可以我们在「/etc/logrotate.d」目录里放置自己的配置文件，用来覆盖logrotate的缺省值。
