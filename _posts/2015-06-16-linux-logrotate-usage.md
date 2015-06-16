@@ -58,22 +58,14 @@ include /etc/logrotate.d
 # system-specific logs may be also be configured here.
 </pre>
 
-简单说明：
-
+简单说明：  
 weekly : 所有的日志文件每周转储一次，也可以是每日daily或每月monthly；  
-
 rotate 4 : 表示保留4份；  
-
 compress : 表示压缩每一份日志文件，默认使用gzip压缩；  
-
 notifempty : 如果是空文件的话，不转储；  
-
 postrotate/endscript : 日志转储后执行的脚本；  
-
 create : 自动创建新的日志文件；  
-
 missingok : 表示如果找不到log也不用报错；  
-
 delaycompress : 表示延后压缩直至下一次rorate；  
 copytruncate : 表示先复制日志内容后再清空，与之相对是create方法；  
 dateext : 表示以日期作为后缀，默认以数字1、2、3等作为后缀；  
@@ -106,6 +98,17 @@ dateext : 表示以日期作为后缀，默认以数字1、2、3等作为后缀�
 # logrotate -d -f /etc/logrotate.d/nginx
 </pre>
 BTW：类似的还有Verbose选项，这里就不多说了。
+
+logrotate命令格式：
+<!--more-->
+<pre class="brush: shell" line="1">
+logrotate [OPTION...] <configfile>
+-d, --debug ：debug模式，测试配置文件是否有错误。
+-f, --force ：强制转储文件。
+-m, --mail=command ：发送日志到指定邮箱。
+-s, --state=statefile ：使用指定的状态文件。
+-v, --verbose ：显示转储过程。
+</pre>
 
 ## logrotate问答
 ### 问题：sharedscripts的作用是什么？
