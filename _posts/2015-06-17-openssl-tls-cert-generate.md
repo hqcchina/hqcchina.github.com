@@ -69,3 +69,5 @@ https://github.com/deckarep/EasyCert
 <a href="http://rhythm-zju.blog.163.com/blog/static/310042008015115718637/">基于 OpenSSL 的 CA 建立及证书签发 </a>
 
 <a href="http://segmentfault.com/a/1190000002569859">基于OpenSSL自建CA和颁发SSL证书</a>
+
+<a href="http://blog.csdn.net/php_boy/article/details/6660697">Linux下CA证书生成</a>

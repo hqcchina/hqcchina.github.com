@@ -89,14 +89,14 @@ dateext : 表示以日期作为后缀，默认以数字1、2、3等作为后缀�
 </pre>
 如果你等不及CRON，可以通过如下命令来手动执行：
 <!--more-->
-<pre class="brush: shell" line="1">
+`
 # logrotate -f /etc/logrotate.d/nginx
-</pre>
+`
 当然，正式执行前最好通过Debug选项来验证一下，这对调试也很重要：
 <!--more-->
-<pre class="brush: shell" line="1">
+`
 # logrotate -d -f /etc/logrotate.d/nginx
-</pre>
+`
 BTW：类似的还有Verbose选项，这里就不多说了。
 
 logrotate命令格式：
