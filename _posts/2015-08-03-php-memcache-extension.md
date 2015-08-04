@@ -42,3 +42,70 @@ updates CentOS-5 - Updates 455
 repolist: 20,115
 </pre>
 能够找到epel包，说明安装成功。
+
+<STRONG>3、yum安装Memcache服务器与php扩展</STRONG>
+<!--more-->
+<pre class="brush: text" line="1">
+[root@www ~]# yum install memcached php-pecl-memcache
+</pre>
+此时应该能正常安装这两个包，而不出现无法找到的情况。
+
+<STRONG>4、安装成功后，检测php是否正常加载了memcache模块：</STRONG>
+<!--more-->
+<pre class="brush: text" line="1">
+[root@www ~]# php -m|grep memcache
+memcache
+</pre>
+返回了“memcache”表示已经安装。
+
+<STRONG>5、设置memcached服务开机自动启动</STRONG>
+<!--more-->
+<pre class="brush: text" line="1">
+[root@www ~]#&nbsp;chkconfig --level 2345 memcached on
+</pre>
+
+<STRONG>6、启动memcached服务并重启nginx服务</STRONG>
+<!--more-->
+<pre class="brush: text" line="1">
+[root@www ~]# service memcached start
+启动 memcached：[确定]
+[root@www ~]# service nginx restart
+停止 nginx：[确定]
+启动 nginx：[确定]
+[root@www ~]# service fastcgi restart
+</pre>
+
+<STRONG>7、测试php支持memcache是否正常</STRONG>
+在apache的网站根目录建立 memcache.php 文件
+<!--more-->
+<pre class="brush: text" line="1">
+vi memcache.php
+</pre>
+内容如下：
+<!--more-->
+<pre class="brush: text" line="1">
+<?php
+$memcache = new Memcache();
+$memcache->connect('127.0.0.1', 11211);
+$memcache->set('key', 'Memcache test successful!', 0, 60);
+$result = $memcache->get('key');
+unset($memcache);
+echo $result;
+?>
+</pre>
+如果一切正常，访问此页面，应该正常返回“Memcache test successful”，至此，Memcached与php扩展memcache安装成功。
+
+Memcached的默认端口为11211，因此在php中使用此端口即可。下面顺便给出个清除memcache所有缓存内容的方法：
+
+执行：
+<!--more-->
+<pre class="brush: text" line="1">
+[root@www ~]# nc localhost 11211
+</pre>
+
+然后输入：
+<!--more-->
+<pre class="brush: text" line="1">
+flush_all
+quit
+</pre>
