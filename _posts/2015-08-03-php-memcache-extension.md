@@ -75,6 +75,25 @@ memcache
 [root@www ~]# service fastcgi restart
 </pre>
 
+注意：php里的fastcgi服务其实就是php-fpm
+如果以上重启fastcgi方式无效的话可以试一下以下办法：
+<!--more-->
+<pre class="brush: text" line="1">
+php 5.3.3 下的php-fpm 不再支持 php-fpm 以前具有的 /usr/local/php/sbin/php-fpm (start|stop|reload)等命令，需要使用信号控制：
+master进程可以理解以下信号
+INT, TERM 立刻终止
+QUIT 平滑终止
+USR1 重新打开日志文件
+USR2 平滑重载所有worker进程并重新载入配置和二进制模块
+示例：
+php-fpm 关闭：
+kill -INT `cat /var/run/php-fpm/php-fpm.pid`
+php-fpm 重启：
+kill -USR2 `cat /var/run/php-fpm/php-fpm.pid`
+查看php-fpm进程数：
+ps aux | grep -c php-fpm
+</pre>
+
 <STRONG>7、测试php支持memcache是否正常</STRONG>
 在apache的网站根目录建立 memcache.php 文件
 <!--more-->
