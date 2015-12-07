@@ -62,12 +62,9 @@ https://github.com/deckarep/EasyCert
 用法也非常简单，go run EasyCert.go -ca=China -host=192.168.1.51即可。
 运行结束后会自动生成三个文件，分别是一对CA机构的公私钥以及一个CA证书。
 
-## 结论
-
-
 ## 参考资料
-<a href="http://rhythm-zju.blog.163.com/blog/static/310042008015115718637/">基于 OpenSSL 的 CA 建立及证书签发 </a>
+1、<a href="http://rhythm-zju.blog.163.com/blog/static/310042008015115718637/">基于 OpenSSL 的 CA 建立及证书签发 </a>
 
-<a href="http://segmentfault.com/a/1190000002569859">基于OpenSSL自建CA和颁发SSL证书</a>
+2、<a href="http://segmentfault.com/a/1190000002569859">基于OpenSSL自建CA和颁发SSL证书</a>
 
-<a href="http://blog.csdn.net/php_boy/article/details/6660697">Linux下CA证书生成</a>
+3、<a href="http://blog.csdn.net/php_boy/article/details/6660697">Linux下CA证书生成</a>
