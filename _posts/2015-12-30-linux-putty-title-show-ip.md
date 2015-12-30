@@ -3,7 +3,7 @@ layout: post
 title: "Putty登陆后设置标题栏显示IP"
 wordpress_id: 8
 wordpress_url: http://www.yunjing.me/?p=8
-date: 2015-08-03 20:24:00 +08:00
+date: 2015-12-30 11:31:00 +08:00
 category: tools
 tags: 
  - linux
