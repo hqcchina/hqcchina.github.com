@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -10,7 +14,7 @@ body {
 }
 
 a {
-  color: #583;
+  color: #1e6bb8;
   font-weight: bold;
   text-decoration: none;
 }
