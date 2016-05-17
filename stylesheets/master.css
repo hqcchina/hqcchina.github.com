@@ -171,7 +171,7 @@ pre {
   overflow: auto;
   color: black;
   line-height: 120%;
-  font-family: "Consolas",Monaco,"Courier New",Courier,monospace;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   letter-spacing: 0;
 }
@@ -277,7 +277,7 @@ div.related {
 
 code {
   font-size: 1em;
-  font-family: "Consolas","Courier New",Courier,monospace;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .home-box .post h1 a {
