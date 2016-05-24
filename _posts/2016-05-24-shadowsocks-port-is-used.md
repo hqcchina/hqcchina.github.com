@@ -19,10 +19,13 @@ tags:
 ```
 
 大概原因可能是本机代理的1080端口被其他进程占用：
+
 ```
 netstat -aon|findstr "1080"
 ```
+
 显示信息如下：
+
 ```
 C:\Users\yunjing>netstat -aon|findstr "1080"
   TCP    0.0.0.0:1080           0.0.0.0:0              LISTENING       4492
@@ -37,6 +40,7 @@ C:\Users\yunjing>netstat -aon|findstr "1080"
   TCP    127.0.0.1:1728         127.0.0.1:1080         ESTABLISHED     4972
   TCP    127.0.0.1:1765         127.0.0.1:1080         ESTABLISHED     6572
 ```
+
 大概就是进程4492、6572、4972之类的导致的，
 打开进程管理器把4492进程干掉
 
