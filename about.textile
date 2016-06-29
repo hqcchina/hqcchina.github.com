@@ -7,13 +7,13 @@ h2. 关于我
 
 * 一个典型的攻城师、码农、Gopher，崇尚自由，喜欢关注新鲜事物
 
-* 擅长游戏服务端开发，专注于高性能、高并发服务端的架构与实现
+* 擅长游戏服务端开发，专注于高性能高并发服务端的架构与实现
 
 * 喜欢*nix、开源、技术宅
 
-* 主要开发语言：Go、Java及C/C++
+* 主要开发语言：Go | Java | C/C++
 
-* 数据库：MongoDB、Redis 及 MySQL
+* 数据库：MongoDB、Redis、InfluxDB 及 MySQL/MariaDB
 
 h2. 软硬环境
 
