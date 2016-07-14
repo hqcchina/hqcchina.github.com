@@ -8,7 +8,6 @@ category: linux
 tags: 
  - linux
  - logrotate
- - 日志管理
 ---
 我发现很多人的服务器上都运行着一些诸如每天切分Nginx日志之类的CRON脚本，大家似乎遗忘了logrotate，争先发明自己的轮子，这真是让人沮丧啊！就好比明明身边躺着现成的性感美女，大家却忙着自娱自乐，罪过！
 
