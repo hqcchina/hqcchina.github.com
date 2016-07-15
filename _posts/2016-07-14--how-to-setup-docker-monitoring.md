@@ -24,19 +24,79 @@ tags:
 [Grafana Metrics Dashboard](https://github.com/grafana/grafana) - 一个流行的监控仪表盘应用，可以非常友好的展现数据信息，页面相当酷炫。
 
 
-## 安装过程
-
-1. 安装InfluxDB 0.13版本
+## Docker-Compose部署
 
 ```
-$ docker run -p 8083:8083 -p 8086:8086 --name influxdb -d influxdb:0.13-alpine
+version: '2'
+services:
+  influxdata:
+    image: busybox
+    volumes:
+      - ./data/influxdb:/data
+
+  influxdb:
+    image: tutum/influxdb:0.13
+    restart: always
+    environment:
+      - PRE_CREATE_DB=cadvisor
+    ports:
+      - "8083:8083"
+      - "8086:8086"
+    expose:
+      - "8090"
+      - "8099"
+    volumes_from:
+      - "influxdata"
+
+  cadvisor:
+    image: google/cadvisor:v0.23.2
+    links:
+      - influxdb:influxdb
+    command: -storage_driver=influxdb -storage_driver_db=cadvisor -storage_driver_host=influxdb:8086 -docker_only=true
+    restart: always
+    ports:
+      - "8080:8080"
+    volumes:
+      - /:/rootfs:ro
+      - /var/run:/var/run:rw
+      - /sys:/sys:ro
+      - /var/lib/docker/:/var/lib/docker:ro
+
+  grafana:
+    image: grafana/grafana:3.1.0
+    restart: always
+    links:
+      - influxdb:influxdb
+    ports:
+      - "3000:3000"
+    environment:
+      - HTTP_USER=admin
+      - HTTP_PASS=admin
+      - INFLUXDB_HOST=influxdb
+      - INFLUXDB_PORT=8086
+      - INFLUXDB_NAME=cadvisor
+      - INFLUXDB_USER=root
+      - INFLUXDB_PASS=root
 ```
 
-打开 http://DockerIP:8083 检查一下InfluxDB是否安装成功
-![InfluxDB管理后台界面](/files/2016/07/influxdb_dashboard2.jpg)
 
-2. 创建cAdvisor数据库
+单独安装cAdvisor
 
+```
+docker run \
+  --volume=/:/rootfs:ro \
+  --volume=/var/run:/var/run:rw \
+  --volume=/sys:/sys:ro \
+  --volume=/var/lib/docker/:/var/lib/docker:ro \
+  --publish=10091:8080 \
+  --detach=true \
+  --name=cadvisor \
+  google/cadvisor:v0.23.2 \
+  -storage_driver influxdb \
+  -storage_driver_host 192.168.1.206:8086 \
+  -storage_driver_db groot_cadvisor \
+  -docker_only true
+```
 
 
 [原文链接](https://www.brianchristner.io/how-to-setup-docker-monitoring/)
