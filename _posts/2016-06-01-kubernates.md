@@ -12,25 +12,26 @@ tags:
 ---
 
 服务器：
-1、CentOS7: 10.10.1.70 `master`
-2、CentOS7: 10.10.1.73
+1、CentOS7: 10.10.1.70 `master`  
+2、CentOS7: 10.10.1.73  
 
 运行环境：
-1、`uname -a` : Linux localhost.localdomain 3.10.0-229.20.1.el7.x86_64 #1 SMP Tue Nov 3 19:10:07 UTC 2015 x86_64 x86_64 x86_64 GNU/Linux
-2、`docker -v`: Docker version 1.11.2, build b9f10c9
+1、`uname -a` : Linux localhost.localdomain 3.10.0-229.20.1.el7.x86_64 #1 SMP Tue Nov 3 19:10:07 UTC 2015 x86_64 x86_64 x86_64 GNU/Linux  
+2、`docker -v`: Docker version 1.11.2, build b9f10c9  
 
 将会安装以下服务或组件：
-1、k8s master
-2、k8s worker
-3、SkyDNS
-4、dashboard
+1、k8s master  
+2、k8s worker  
+3、SkyDNS  
+4、dashboard  
 
 安装手册：
-[Portable Multi-Node Clusters](http://kubernetes.io/docs/getting-started-guides/docker-multinode/master/)
+适用于v1.2.6版本：[Portable Multi-Node Clusters](http://kubernetes.io/docs/getting-started-guides/docker-multinode/master/)
+适用于v1.3.4版本：[Portable Multi-Node Clusters](https://github.com/kubernetes/kube-deploy/tree/master/docker-multinode)
 
 ## 安装Kubernetes v1.2.6版本过程问题记录
 
-1、无法拉取gcr.io镜像被墙问题
+1、无法拉取gcr.io镜像被墙问题  
 使用squid3在海外服务器搭建HTTP代理，然后，配置docker服务使用HTTP代理。
 
 ```
@@ -49,7 +50,7 @@ $ sudo systemctl daemon-reload
 $ sudo systemctl restart docker
 ```
 
-2、启动worker结点上的docker服务报"Cannot start a container because of oci runtime error."
+2、启动worker结点上的docker服务报"Cannot start a container because of oci runtime error."  
 在启动worker服务时，可能会报以下错误：
 
 ```
@@ -62,7 +63,7 @@ $ sudo systemctl restart docker
 sh -c 'docker daemon -H unix:///var/run/docker-bootstrap.sock -p /var/run/docker-bootstrap.pid --iptables=false --ip-masq=false --bridge=none --exec-root=/var/run/docker-bootstrap --graph=/var/lib/docker-bootstrap 2> /var/log/docker-bootstrap.log 1> /dev/null &'
 ```
 
-3、SkyDNS服务启动不正常，出现"Using Kubernetes API<nil>"报错
+3、SkyDNS服务启动不正常，出现"Using Kubernetes API<nil>"报错  
 在启动SkyDNS时会出现运行一段时间后自动崩溃，原因未知。
 经过排查后，在kube2sky服务结点的日志里发现线索：
 
@@ -96,7 +97,7 @@ wget: can't connect to remote host (10.0.0.1): Connection timed out
 
 ## 安装Kubernetes v1.3.3版本过程问题记录
 
-1、启动master结点的apiserver时报"Invalid Authentication Config: open /srv/kubernetes/basic_auth.csv: no such file or directory"错误
+1、启动master结点的apiserver时报"Invalid Authentication Config: open /srv/kubernetes/basic_auth.csv: no such file or directory"错误  
 报错信息如下：
 
 ```shell
@@ -106,7 +107,18 @@ W0730 03:58:27.678801       1 server.go:173] No RSA key provided, service accoun
 F0730 03:58:27.678856       1 server.go:206] Invalid Authentication Config: open /srv/kubernetes/basic_auth.csv: no such file or directory
 ```
 
-Google了一圈之后，重启一下docker服务，把当前已有容器全部移除，然后，重新启动了一下k8s，一切恢复正常。
+Google了一圈之后，没有发现有效的解决办法。无奈自行重启docker服务，把当前已有容器全部移除，然后，直接启动k8s一切正常。
 
-2、k8s自动启动dashboard报"dial tcp 10.0.0.1:443: getsockopt: no route to host"
-这大概又是apiserver启动时配置的master地址错误，但由于这次是k8s自行启动的，那我们只能以hook的方法来解决。
+2、k8s自动启动dashboard报"dial tcp 10.0.0.1:443: getsockopt: no route to host"  
+这和1.2.6版本时出现的类似问题是一样一样的，解决办法无非就是指定正确的master地址。但，此次由于这是k8s自行创建的，需要去探索在哪里可以修改这个master地址，或者，直接把api server监听整成SSL的。
+
+由于此办法无效，转而使用其他比较新的文档进行重新安装。见上文提到的另一种Multi Node安装手册。
+
+然后发现此问题仍然存在，据说是pod的创建时间早于secret的创建时间，解决办法如下：
+
+```
+$ kubectl get secret --namespace=kube-system
+$ kubectl delete secret <secret-name> --namepace=kube-system
+$ kubectl delete po <po-name> --namespace=kube-system
+```
+
