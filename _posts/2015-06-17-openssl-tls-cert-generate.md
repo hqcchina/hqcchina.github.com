@@ -62,6 +62,17 @@ https://github.com/deckarep/EasyCert
 用法也非常简单，go run EasyCert.go -ca=China -host=192.168.1.51即可。
 运行结束后会自动生成三个文件，分别是一对CA机构的公私钥以及一个CA证书。
 
+## 相关
+
+### 生成docker registry的https证书：
+
+```
+openssl req -nodes \
+-subj "/C=CN/ST=FuJian/L=XiaMen/CN=example.crazyant.com" \
+-newkey rsa:4096 -keyout domain.key -out domain.csr
+openssl x509 -req -days 3650 -in domain.csr -signkey domain.key -out domain.crt
+```
+
 ## 参考资料
 1、<a href="http://rhythm-zju.blog.163.com/blog/static/310042008015115718637/">基于 OpenSSL 的 CA 建立及证书签发 </a>
 
