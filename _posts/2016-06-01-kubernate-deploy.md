@@ -122,3 +122,20 @@ $ kubectl delete secret <secret-name> --namepace=kube-system
 $ kubectl delete po <po-name> --namespace=kube-system
 ```
 
+## 安装Kubernetes v1.4.x版本过程问题记录
+
+从1.4.x版本开始，kubernetes使用一种叫kubeadm的工具，CentOS7下面直接使用yum安装即可。
+
+体验了一下这个yum安装，然而，无法使用正常启动，等待新版本发布。
+
+1、启动时报hostname不合法
+
+```
+# kubeadm init
+Running pre-flight checks
+preflight check errors:
+        hostname "vm_208_92_centos" must match the regex [a-z0-9]([-a-z0-9]*[a-z0-9])?(\.[a-z0-9]([-a-z0-9]*[a-z0-9])?)* (e.g. 'example.com')
+```
+
+尝试把 /etc/hostname 文件里的内容修改为 k8s.crazyant.com 尝试了一下
+
