@@ -4,9 +4,9 @@ title: "Kubernete代理介绍"
 wordpress_id: 22
 wordpress_url: http://www.yunjing.me/?p=22
 date: 2017-12-13 17:25:00 +08:00
-category: kubernete
+category: kubernetes
 tags: 
- - kubernete
+ - kubernetes
  - proxy
 ---
 
