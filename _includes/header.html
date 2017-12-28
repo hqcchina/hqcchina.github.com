@@ -26,13 +26,13 @@
         <a href="{{ site.baseurl }}/">Home</a></li>
 
         {% for p in site.pages %}
-          {% if p.title and p.url %}
+          {% if p.title and p.url and p.url != "/" %}
             {% if p.url == page.url %}
               <li class="active">
               {% else %}
               <li>
             {% endif %}
-            <a href="{{ p.url | prepend: site.baseurl }}"><span class="glyphicon {{ p.icon }}"></span> {{ p.title }}</a></li>
+            <a href="{{ p.url | prepend: site.baseurl }}"><span class="glyphicon {{ p.icon }}"></span> {{ p.title }} {{ p.tags }}</a></li>
           {% endif %}
         {% endfor %}
       </ul>
