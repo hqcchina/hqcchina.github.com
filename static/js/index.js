@@ -12,9 +12,11 @@ $(document).ready(function() {
  * load方法，页面的加载完成后触发
  * {fixFooterInit();} 固定Footer栏
  */
-/*$(window).load(function() {
+$(window).load(function() {
     fixFooterInit();
-});*/
+
+    console.log("结庐在人境，而无车马喧。\n问君何能尔？心远地自偏。\n采菊东篱下，悠然见南山。\n山气日夕佳，飞鸟相与还。\n此中有真意，欲辨已忘言。");
+});
 
 
 /**
