@@ -8,47 +8,49 @@ permalink: /about/
 * content
 {:toc}
 
-## About the site
-This is a personal website of LiXizhi, created with github and jekyll. 
-Create your own website is as easy as clone or fork a [template](https://github.com/LiXizhi/lixizhi.github.io) on github, and [commit](http://jekyllrb.com/docs/posts/) to `_posts` folder. 
+h2. 关于我
 
-### Admin tools
-* site [configuration file](https://github.com/LiXizhi/lixizhi.github.io/blob/master/_config.yml)
-* Jekyll + [lixizhi.duoshuo.com](http://lixizhi.duoshuo.com/admin/)
-* Jekyll + [lixizhi.disqus.com](http://lixizhi.disqus.com/admin/)
-* Jekyll theme templates: [jekyllthemes.org](http://jekyllthemes.org)
-   * Theme used: [cool-concise](http://jekyllthemes.org/themes/cool-concise-high-end/)
-* Jekyll official site: [jekyllrb.com](http://jekyllrb.com)
-* YAML for human readable markdown: [yaml.org](http://www.yaml.org/)
-* markdown reference: [kramdown](http://kramdown.gettalong.org/quickref.html)
+* 一个典型的攻城师、码农、Gopher，崇尚自由，喜欢关注新鲜事物
 
-### About comments
-Add a variable called `comments` to the [YAML front matter](http://jekyllrb.com/docs/frontmatter/) and set its value to true. A sample might look like:
+* 擅长游戏服务端开发，专注于高性能高并发服务端的架构与实现
 
-    ---
-    layout: post
-    comments: true
-    # other options
-    ---
+* 喜欢*nix、开源、技术宅
 
-### Sample markdowns
-Click view source at the bottom of the page
+* 主要开发语言：Go | Java | C/C++
 
-* Embedding code
-{% highlight lua %}
-local function main()
-	print("hello world everyone")
-end
-{% endhighlight %}
+* 数据库：MongoDB、Redis、InfluxDB 及 MySQL/MariaDB
 
+h2. 软硬环境
 
-## About me
+* 操作系统：Mac OS X && Windows 7
 
-My primary research interest is in artificial intelligence, programming and education. See my project page for details.
+* Shell: putty、ssh
 
+* 编辑器：VIM && Sublime Text
 
-### 2005 Old Website 
-Here is my old personal website when I was in University. It was mostly on my projects and thoughts before 2005.
+* IDE：Visual Studio && Xcode && Eclipse
 
-* [Xizhi's old website before 2005](/oldsite2005/index.htm). 
+* 浏览器：Chrome && Safari
 
+h2. 关于yunjing.me
+
+* 记录IT生涯中的点点滴滴
+
+* 相互学习共同进步
+
+h2. 联系我
+
+* QQ：373216707
+* Email、Apple ID：hqc2010[@]gmail.com
+* 微博（Weibo Sina）: <a href='http://weibo.com/u/2368449022'>@云景Neil</a>
+* 博客（Blog）: <a href='http://www.yunjing.me'>http://www.yunjing.me</a>
+
+h2. Github项目
+
+花点时间浏览或许能发现你所需要的^_^
+
+* <a href='https://github.com/huangqingcheng'>https://github.com/huangqingcheng</a>
+
+h2. 关于版权
+
+除特别说明外，本博客内容皆为原创，可以自由转载传播，但请署名及注明出处（鄙视垃圾爬虫）！

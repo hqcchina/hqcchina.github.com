@@ -8,9 +8,7 @@
 博客主题：
 ====
 
-最初版本来源于：[https://github.com/mbleigh/mbleigh.github.com](https://github.com/mbleigh/mbleigh.github.com)
-
-后经蒋鑫修改：[https://github.com/gotgit/gotgit.github.com](https://github.com/gotgit/gotgit.github.com)
+最初版本来源于：[http://lixizhi.github.io/](https://github.com/LiXizhi/lixizhi.github.io)
 
 
 插件配置：
