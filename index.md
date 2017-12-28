@@ -2,6 +2,6 @@
 layout: frontpage
 ---
 
-## Welcome to my website
+## 欢迎光临
 
-Feel free to send me emails or join our team.
+专注游戏服务端开发
