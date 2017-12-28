@@ -10,6 +10,8 @@
 
 最初版本来源于：[http://lixizhi.github.io/](https://github.com/LiXizhi/lixizhi.github.io)
 
+[Jekyll主题](http://jekyllthemes.org)
+
 
 插件配置：
 ===

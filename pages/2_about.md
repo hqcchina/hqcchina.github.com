@@ -14,9 +14,9 @@ h2. 关于我
 
 * 擅长游戏服务端开发，专注于高性能高并发服务端的架构与实现
 
-* 喜欢*nix、开源、技术宅
+* 喜欢\*nix、开源、技术宅
 
-* 主要开发语言：Go | Java | C/C++
+* 主要开发语言：Go、Java、C/C++
 
 * 数据库：MongoDB、Redis、InfluxDB 及 MySQL/MariaDB
 
@@ -47,7 +47,7 @@ h2. 联系我
 
 h2. Github项目
 
-花点时间浏览或许能发现你所需要的^_^
+花点时间浏览或许能发现你所需要的^\_^
 
 * <a href='https://github.com/huangqingcheng'>https://github.com/huangqingcheng</a>
 
