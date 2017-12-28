@@ -1,11 +1,8 @@
 --- 
 layout: post
 title: "手游帧同步方案总结"
-wordpress_id: 21
-wordpress_url: http://www.yunjing.me/?p=21
-date: 2017-12-13 14:06:00 +08:00
-category: udp
-tags: 
+comments: true
+categories:
  - udp
  - pvp
 ---

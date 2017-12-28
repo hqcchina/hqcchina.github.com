@@ -1,11 +1,8 @@
 --- 
 layout: post
 title: "使用KCP协议实现HTTP代理服务"
-wordpress_id: 16
-wordpress_url: http://www.yunjing.me/?p=16
-date: 2016-06-21 14:01:00 +08:00
-category: kcp
-tags: 
+comments: true
+categories:
  - linux
  - kcp
  - http

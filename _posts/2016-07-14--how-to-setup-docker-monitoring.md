@@ -1,11 +1,8 @@
 --- 
 layout: post
 title: "Docker监控方案 - cAdvisor + InfluxDB + Grafana"
-wordpress_id: 19
-wordpress_url: http://www.yunjing.me/?p=19
-date: 2016-07-14 10:09:00 +08:00
-category: docker
-tags: 
+comments: true
+categories:
  - docker
  - monitoring
  - cadvisor

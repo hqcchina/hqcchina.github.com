@@ -1,11 +1,8 @@
 --- 
 layout: post
 title: "持续更新：Kubernates安装与过程中碰到的问题记录"
-wordpress_id: 14
-wordpress_url: http://www.yunjing.me/?p=14
-date: 2016-06-01 14:28:00 +08:00
-category: kubernates
-tags: 
+comments: true
+categories:
  - centos
  - docker
  - kubernates

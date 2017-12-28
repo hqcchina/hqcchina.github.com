@@ -1,11 +1,8 @@
 --- 
 layout: post
 title: "Docker镜像生成时报错devmapper空间不足"
-wordpress_id: 20
-wordpress_url: http://www.yunjing.me/?p=20
-date: 2016-08-10 10:09:00 +08:00
-category: docker
-tags: 
+comments: true
+categories:
  - docker
  - devmapper
 ---

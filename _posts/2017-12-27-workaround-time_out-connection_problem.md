@@ -1,11 +1,8 @@
 --- 
 layout: post
 title: "HTTP压力测试时大量Timeout的问题解决"
-wordpress_id: 23
-wordpress_url: http://www.yunjing.me/?p=23
-date: 2017-12-27 16:15:00 +08:00
-category: http
-tags: 
+comments: true
+categories:
  - test
  - http
 ---

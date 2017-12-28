@@ -1,11 +1,8 @@
 --- 
 layout: post
 title: "Docker下的跨主机网络解决简单方案"
-wordpress_id: 15
-wordpress_url: http://www.yunjing.me/?p=15
-date: 2016-06-02 14:55:00 +08:00
-category: docker
-tags: 
+comments: true
+categories:
  - docker
  - vxlan
  - linux

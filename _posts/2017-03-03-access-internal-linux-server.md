@@ -1,11 +1,8 @@
 --- 
 layout: post
 title: "访问其它网络环境内的Linux服务器"
-wordpress_id: 20
-wordpress_url: http://www.yunjing.me/?p=20
-date: 2017-03-03 23:29:47 +08:00
-category: linux
-tags: 
+comments: true
+categories:
  - linux
  - ssh
 ---

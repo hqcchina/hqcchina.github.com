@@ -1,11 +1,8 @@
 --- 
 layout: post
 title: "高可用MongoDB搭建"
-wordpress_id: 18
-wordpress_url: http://www.yunjing.me/?p=18
-date: 2016-07-13 20:28:00 +08:00
-category: mongodb
-tags: 
+comments: true
+categories:
  - mongodb
  - cluster
 ---
