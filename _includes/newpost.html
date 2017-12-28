@@ -11,13 +11,13 @@
             var defaultText =  [
                 '---',
                 'layout: post',
-                'title: add your title here',
+                'title: ' + title,
                 'comments: true',
                 'categories:',
                 ' - tag1',
                 ' - tag2',
                 '---',
-                'Add your article here...'
+                ''
                 ].join('\n');
             urlNewPage += "&value=" + encodeURIComponent(defaultText);
             window.open(urlNewPage);
