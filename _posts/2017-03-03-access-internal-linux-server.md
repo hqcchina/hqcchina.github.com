@@ -4,7 +4,6 @@ title: "访问其它网络环境内的Linux服务器"
 comments: true
 categories:
  - linux
- - ssh
 ---
 
 有些时候，需要访问外部的Linux主机。但由于一般主机都会位于对方的内网，而没有办法直接连接。本文介绍一种使用ssh代理进行访问的解决方案。

@@ -3,8 +3,7 @@ layout: post
 title: "手游帧同步方案总结"
 comments: true
 categories:
- - udp
- - pvp
+ - 帧同步
 ---
 
 ## 帧同步方案介绍

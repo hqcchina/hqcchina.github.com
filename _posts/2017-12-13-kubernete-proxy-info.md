@@ -4,7 +4,6 @@ title: "Kubernete代理介绍"
 comments: true
 categories:
  - kubernetes
- - proxy
 ---
 
 用户在使用 Kubernetes 的过程中可能遇到几种不同的代理（proxy）：
