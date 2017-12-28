@@ -13,7 +13,7 @@ $(document).ready(function() {
  * {fixFooterInit();} 固定Footer栏
  */
 $(window).load(function() {
-    fixFooterInit();
+    // fixFooterInit();
 
     console.log("结庐在人境，而无车马喧。\n问君何能尔？心远地自偏。\n采菊东篱下，悠然见南山。\n山气日夕佳，飞鸟相与还。\n此中有真意，欲辨已忘言。");
 });
@@ -115,8 +115,8 @@ function backToTop() {
     });
     //点击回到顶部
     $("#top").click(function() {
-        $("body").animate({
-            scrollTop: "0"
+        $("body,html").animate({
+            scrollTop: 0
         }, 500);
     });
 
