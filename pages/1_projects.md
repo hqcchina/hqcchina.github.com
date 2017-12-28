@@ -8,24 +8,22 @@ permalink: /projects/
 * content
 {:toc}
 
-# All projects
-Following are projects started by other. 
+# 曾经做过的项目
+罗列曾经完成的项目，包括业余与工作的所有内容。
 
-## NPL project
-* Started: 2004-present
-* Website: [www.nplproject.com](http://www.nplproject.com)
-   * NPL Code Wiki
-   * NPL language service and debugger
+## 你胖你先吃
+* Started: 2017年-现在
+* Website: [eat.crazyant.com](http://eat.crazyant.com)
 
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
- 
+休闲弱联网游戏
 
-## xxxxxxxxxxxxxxxxxx
-* Started: 2012-present
-* Website: [www.paracraft.cn](http://www.paracraft.cn)
-   * [ParacraftSDK](https://github.com/LiXizhi/ParaCraftSDK)
-   * Self Learning College
+## Crazyant
+* Started: 2014年6月-2016年11月
+* Website: [www.crazyant.com](http://www.crazyant.com)
+   * 休闲游戏开发工作室
+   * 统一的、共用的微服务架构的服务端
+* 技术栈
+   * 主要开发语言：Go
+   * 运行环境: Kubernetes, Docker
 
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 
-
-
+通用的游戏服务配套系统
