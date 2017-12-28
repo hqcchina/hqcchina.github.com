@@ -17,5 +17,5 @@ CentOS 7.0
 2. 在安装机进行aws configure指定IAM权限；
 3. 安装Kubernates环境；
 
-[理解Docker跨多主机容器网络](http://tonybai.com/2016/02/15/understanding-docker-multi-host-networking/)
-[Docker+OpenvSwitch搭建VxLAN实验环境](http://www.cnblogs.com/yuuyuu/p/5180827.html)
+* [理解Docker跨多主机容器网络](http://tonybai.com/2016/02/15/understanding-docker-multi-host-networking/)
+* [Docker+OpenvSwitch搭建VxLAN实验环境](http://www.cnblogs.com/yuuyuu/p/5180827.html)

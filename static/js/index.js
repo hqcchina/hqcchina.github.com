@@ -129,7 +129,6 @@ function backToTop() {
  * 侧边目录
  */
 function generateContent() {
-
     // console.log($('#markdown-toc').html());
     if (typeof $('#markdown-toc').html() === 'undefined') {
         // $('#content .content-text').html('<ul><li>文本较短，暂无目录</li></ul>');
@@ -143,5 +142,4 @@ function generateContent() {
             'data-offset': '50'
         });*/
     }
-    console.log("myAffix!!!");
 }
