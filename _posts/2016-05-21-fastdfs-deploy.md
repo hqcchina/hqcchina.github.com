@@ -1,11 +1,8 @@
 --- 
 layout: post
 title: "基本FastDFS打造全球头像存储系统"
-wordpress_id: 11
-wordpress_url: http://www.yunjing.me/?p=11
-date: 2016-05-21 10:43:00 +08:00
-category: FastDFS
-tags: 
+comments: true
+categories:
  - linux
  - fastdfs
  - cdn

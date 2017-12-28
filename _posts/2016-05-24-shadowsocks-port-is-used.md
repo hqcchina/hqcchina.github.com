@@ -1,11 +1,8 @@
 --- 
 layout: post
 title: "问题解决：Shadowsocks端口已被占用"
-wordpress_id: 12
-wordpress_url: http://www.yunjing.me/?p=12
-date: 2016-05-24 13:52:00 +08:00
-category: Shadowsocks
-tags: 
+comments: true
+categories:
  - windows
  - shadowsocks
 ---

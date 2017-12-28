@@ -1,11 +1,8 @@
 --- 
 layout: post
 title: "Shell环境下生成文件并写内容"
-wordpress_id: 10
-wordpress_url: http://www.yunjing.me/?p=10
-date: 2016-01-01 10:24:00 +08:00
-category: linux
-tags: 
+comments: true
+categories:
  - linux
  - shell
 ---

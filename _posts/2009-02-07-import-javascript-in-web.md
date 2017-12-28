@@ -4,12 +4,6 @@ title: "关于WEB开发中引入javascript文件方式的一点建议"
 comments: true
 categories:
  - javascript
-tags: 
- - jquery
- - prototype
- - dojo
- - ext
- - 建议
 ---
 平常我们开发WEB应用是会用到第三方工具包，例如：jQuery、prototype、dojo、ext等等，第三方工具包有个特点就是在发布的时候文件名都是以版本号命名文件，例如：jquery-1.2.6.js，其中1.2.6就是版本号。
 

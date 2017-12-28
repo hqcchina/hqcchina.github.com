@@ -1,11 +1,8 @@
 --- 
 layout: post
 title: "Putty登陆后设置标题栏显示IP"
-wordpress_id: 8
-wordpress_url: http://www.yunjing.me/?p=8
-date: 2015-12-30 11:31:00 +08:00
-category: tools
-tags: 
+comments: true
+categories:
  - linux
  - putty
 ---
@@ -19,7 +16,7 @@ tags:
 if [ "$SSH_CONNECTION" != '' -a "$TERM" != 'linux' ]; then
 declare -a HOSTIP
 HOSTIP=`echo $SSH_CONNECTION |awk '{print $3}'`
-export PROMPT_COMMAND='echo -ne "\033]0;${USER}@$HOSTIP:[${HOSTNAME%%.*}]:${PWD/#$HOME/~} \007"'
+export PROMPT_COMMAND='echo -ne "\033]0;${USER}@$HOSTIP:[${HOSTNAME%%.\*}]:${PWD/#$HOME/~} \007"'
 fi
 </pre>
 

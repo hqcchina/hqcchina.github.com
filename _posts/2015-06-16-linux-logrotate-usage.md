@@ -1,11 +1,8 @@
 --- 
 layout: post
 title: "被遗忘的logrotate"
-wordpress_id: 4
-wordpress_url: http://www.yunjing.me/?p=4
-date: 2015-06-16 11:21:00 +08:00
-category: linux
-tags: 
+comments: true
+categories:
  - linux
  - logrotate
 ---

@@ -1,11 +1,8 @@
 --- 
 layout: post
 title: "grpc-go里获取远程连接客户端的IP方法"
-wordpress_id: 13
-wordpress_url: http://www.yunjing.me/?p=13
-date: 2016-05-25 20:55:00 +08:00
-category: grpc
-tags: 
+comments: true
+categories:
  - grpc
  - golang
 ---

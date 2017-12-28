@@ -1,16 +1,11 @@
 --- 
 layout: post
 title: "gRPC库的TLS自签名证书生成"
-wordpress_id: 5
-wordpress_url: http://www.yunjing.me/?p=5
-date: 2015-06-17 13:38:00 +08:00
-category: tls
-tags: 
- - tls
+comments: true
+categories:
+ - grpc
  - openssl
  - golang
- - grpc
- - ca
 ---
 Google出品的gRPC问世有一段时间，想着抽个空来做个DEMO上个手看看效果如何。
 服务端使用grpc-go库，客户端使用grpc-objectivec版本并运行在iPhone设备上。

@@ -1,11 +1,9 @@
 --- 
 layout: post
 title: "CentOS Memcache安装配置教程（PHP与Memcache快速搭建）"
-wordpress_id: 7
-wordpress_url: http://www.yunjing.me/?p=7
-date: 2015-08-03 20:24:00 +08:00
-category: jquery
-tags: 
+comments: true
+categories:
+ - linux
  - php
  - extension
  - memcache

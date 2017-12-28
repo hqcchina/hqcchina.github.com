@@ -1,11 +1,8 @@
 --- 
 layout: post
 title: "国产某jQuery UI库破解"
-wordpress_id: 6
-wordpress_url: http://www.yunjing.me/?p=6
-date: 2015-07-04 15:02:00 +08:00
-category: jquery
-tags: 
+comments: true
+categories:
  - jquery
  - miniui
  - 破解
