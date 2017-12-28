@@ -1,42 +1,41 @@
 ---
-layout: master
+layout: default
 ---
-<div class='post'>
-  <span class='date'>{{page.date | date: "%d %b %Y"}}</span>
-  <a href='{{post.url}}#comments' title='分享文章、查看评论' style="float:right">Comments</a>
-  <h1><a href='{{page.url}}'>{{page.title}}</a></h1>
-  <div class='body'>{{ content }}</div>
-  <div class="original-post corner-all"><strong>原创文章，转载请注明：</strong>转载自：<a href='{{page.url}}'>{{page.title}}</a></div>
+<div class="row">
+  <div id="myArticle" class="col-sm-9">
+    <div class="post-area post">
+      <header>
+        <h1>{{ page.title }}</h1>
+        <p>{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+      </header>
+      <hr>
+      <article>
+        {{content}}
+      </article>
+      <hr>
+        <div class="bdsharebuttonbox">
+            <a href="#" class="bds_more" data-cmd="more"></a>
+            <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+            <a href="#" class="bds_douban" data-cmd="douban" title="分享到豆瓣网"></a>
+            <a href="#" class="bds_fbook" data-cmd="fbook" title="Share to Facebook"></a>
+            <a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+        </div>
+        <script>
+            window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    </div>
+	{% include comments.html %}
+  </div>
+  
+  <div id="content" class="col-sm-3">
+    <!-- <div id="myAffix" class="shadow-bottom-center hidden-xs" data-spy="affix" data-offset-top="0" data-offset-bottom="-20"> -->
+    <div id="myAffix" class="shadow-bottom-center hidden-xs" >
+      <div class="categories-list-header">
+        Content
+      </div>
+      <div class="content-text"></div>
+    </div>
+  </div>
+  
 </div>
-
-<!-- JiaThis Button BEGIN -->
-<div class="jiathis_style_32x32">
-  <a class="jiathis_button_weixin"></a>
-  <a class="jiathis_button_tsina"></a>
-  <a class="jiathis_button_douban"></a>
-  <a class="jiathis_button_copy"></a>
-  <a class="jiathis_button_evernote"></a>
-  <a href="http://www.jiathis.com/share?uid=2038840" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
-  <a class="jiathis_counter_style"></a>
-</div>
-<script type="text/javascript">
-var jiathis_config = {data_track_clickback:'true'};
-</script>
-<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=2038840" charset="utf-8"></script>
-<!-- JiaThis Button END -->
-
-<!-- Wumii Related BEGIN -->
-<div id="comments"  style="padding-bottom: 1em;"/>
-<script type="text/javascript" id="wumiiRelatedItems"></script>
-<script type="text/javascript">
-    var wumiiPermaLink = location.href; //请用代码生成文章永久的链接
-    var wumiiTitle = document.title; //请用代码生成文章标题
-    var wumiiTags = ""; //请用代码生成文章标签，以英文逗号分隔，如："标签1,标签2"
-    var wumiiSitePrefix = "http://www.yunjing.me/";
-    var wumiiParams = "&num=5&mode=3&pf=JAVASCRIPT";
-</script>
-<script type="text/javascript" src="http://widget.wumii.com/ext/relatedItemsWidget"></script>
-<a href="http://www.wumii.com/widget/relatedItems" style="border:0;">
-  <img src="http://static.wumii.cn/images/pixel.png" alt="无觅关联推荐，快速提升流量" style="border:0;padding:0;margin:0;" />
-</a>
-<!-- Wumii Related END -->
