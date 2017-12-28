@@ -11,8 +11,6 @@ permalink: /projects/
 ### 曾经做过的项目
 罗列曾经完成的项目，包括业余与工作的所有内容。
 
-#### 游戏服务端框架
-
 #### 你胖你先吃
 * Started: 2017年-现在
 * Website: [eat.crazyant.com](http://eat.crazyant.com)
@@ -32,6 +30,12 @@ permalink: /projects/
 
 #### 天天冒险岛
 
+刀塔like手游
+
 #### 进击的小怪兽
 
+休闲弱联网三消类型手游
+
 #### 精灵王国
+
+MMORPG页游
