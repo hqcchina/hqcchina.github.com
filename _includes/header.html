@@ -18,7 +18,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
 
-        {% if page.url == "/index.html" %}
+        {% if page.url == "/" %}
           <li class="active">
           {% else %}
           <li>
@@ -26,7 +26,7 @@
         <a href="{{ site.baseurl }}/">Home</a></li>
 
         {% for p in site.pages %}
-          {% if p.url %}
+          {% if p.title and p.url %}
             {% if p.url == page.url %}
               <li class="active">
               {% else %}
