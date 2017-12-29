@@ -5,7 +5,6 @@ comments: true
 categories:
  - linux
  - php
- - extension
  - memcache
 ---
 本教程将介绍如何在CentOS中安装Memcache缓存服务。Memcache是一个与php兼容的内存高速缓存插件，不仅可以缓存变量等对象，而且可以与MySQL配合，缓存数据查询。由于Memcache在内存中缓存数据，因此它的读取写入速度非常之快，能为大容量快速变化的动态数据提供高速缓存。

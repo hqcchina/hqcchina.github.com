@@ -12,10 +12,14 @@ permalink: /projects/
 罗列曾经完成的项目，包括业余与工作的所有内容。
 
 #### 你胖你先吃
-* Started: 2017年-现在
+* Started: 2017年6月-现在
 * Website: [eat.crazyant.com](http://eat.crazyant.com)
 
 休闲弱联网游戏
+
+#### Crash Me!
+* Started: 2016年12月-2017年6月
+* 状态：技术内测
 
 #### Crazyant
 * Started: 2014年6月-2016年11月
