@@ -121,13 +121,13 @@ HOME=/
 22 4 * * 0 root run-parts /etc/cron.weekly
 42 4 1 * * root run-parts /etc/cron.monthly
 ```
-如果使用的是新版CentOS，那么配置文件为：/etc/anacrontab。
+如果使用的是新版CentOS，那么配置文件为：`/etc/anacrontab`。
 
 ### 问题：如何告诉应用程序重新打开日志文件？
 
 以Nginx为例，是通过postrotate指令发送USR1信号来通知Nginx重新打开日志文件的。但是其他的应用程序不一定遵循这样的约定，比如说MySQL是通过flush-logs来重新打开日志文件的。更有甚者，有些应用程序就压根没有提供类似的方法，此时如果想重新打开日志文件，就必须重启服务，但为了高可用性，这往往不能接受。还好Logrotate提供了一个名为copytruncate的指令，此方法采用的是先拷贝再清空的方式，整个过程中日志文件的操作句柄没有发生改变，所以不需要通知应用程序重新打开日志文件，但是需要注意的是，在拷贝和清空之间有一个时间差，所以可能会丢失部分日志数据。
 
-BTW：MySQL本身在support-files目录已经包含了一个名为mysql-log-rotate的脚本，不过它比较简单，更详细的日志轮转详见「Rotating MySQL Slow Logs Safely」。
+BTW：MySQL本身在support-files目录已经包含了一个名为mysql-log-rotate的脚本，不过它比较简单，更详细的日志轮转详见[「Rotating MySQL Slow Logs Safely」](https://www.percona.com/blog/2013/04/18/rotating-mysql-slow-logs-safely/)。
 
 …
 
