@@ -56,19 +56,18 @@ memcache
 
 <STRONG>5、设置memcached服务开机自动启动</STRONG>
 ```bash
-[root@www ~]#&nbsp;chkconfig --level 2345 memcached on
+[root@www ~]# chkconfig --level 2345 memcached on
 ```
 
 <STRONG>6、启动memcached服务并重启nginx服务</STRONG>
-<!--more-->
-<pre class="brush: text" line="1">
+```bash
 [root@www ~]# service memcached start
 启动 memcached：[确定]
 [root@www ~]# service nginx restart
 停止 nginx：[确定]
 启动 nginx：[确定]
 [root@www ~]# service fastcgi restart
-</pre>
+```
 
 注意：php里的fastcgi服务其实就是php-fpm
 如果以上重启fastcgi方式无效的话可以试一下以下办法：
