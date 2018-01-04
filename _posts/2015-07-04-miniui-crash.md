@@ -29,19 +29,17 @@ categories:
 原本以为进行到第4步就万事大吉，想不到打开页面竟然一片空白，Oh my God，一天多的手动替换全白费了。
 继续下断，找啊找，终于，发现一个很神奇的 判断一个函数的toString里indexOf一个/r字符是否!= -1，这有问题，不科学。
 全文搜索一个这个代表/r的字符，然后，有好多类似的代码片段。
-<!--more-->
-<pre class="brush: javascript" line="1">
+```javascript
 lOoO1l = oOOloo = oO1oll = olOoo = l1ol11 = oll000 = ollO11 = o11101 = l1o10l = OoOol1 = ol0110 = o011l1 = o0O0l0 = OO0loO = O10l1O = l0OO10 = o0010l = o11oo0 = lll0lO = oo00lo = window;
 o0l = ll0 = lOO = oOO = oOo = l10 = Ool = loO1o0 = lOl = OO1 = oO0 = ol000O = O00 = OoO = o01 = "toString";
 Oo1 = ooo = o00 = Oo0 = oOl = l0Ol00 = ool = O1lolo = l1l = l00 = OOl = Ol0 = oll = oO0O11 = ol0o10 = "indexOf";
 llo = o0o = Oll = l1O = o1O = OlO = lO000o = O10ol1 = OOO0OO = lO0 = "\r";
-</pre>
+```
 统统删除，这个好多，不能手动删除，要累死人。可以参考以下正则表达式（Sublime适用）：
-<!--more-->
-<pre class="brush: text" line="1">
+```javascript
 ^\s+if\s\([10oOl]+\[[10oOl]+\]\(\)\[(Oo1|ooo|o00|Oo0|oOl|l0Ol00|ool|O1lolo|l1l|l00|OOl|Ol0|oll|oO0O11|ol0o10)\]\((llo|o0o|Oll|l1O|o1O|OlO|lO000o|O10ol1|OOO0OO|lO0)\).*\s+return;.*\s
-</pre>
+```
 
 删除完毕之后，熟悉的页面终于出现~
 
-免责声明：本文仅供学习研究使用，不得用于任何商业用途，否则后果自负。
+<font color="RED">免责声明：本文仅供学习研究使用，不得用于任何商业用途，否则后果自负。</font>

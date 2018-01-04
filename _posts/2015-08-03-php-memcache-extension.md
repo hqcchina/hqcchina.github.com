@@ -14,8 +14,8 @@ categories:
 <STRONG>1、由于CentOS系统默认源没有memcache安装包，因此需要导入第三方的源。执行如下两条命令：</STRONG>
 <!--more-->
 ```bash
-[root@www ~]#&nbsp;wget http://soft.bootf.com/rpm/epel-release-5-4.noarch.rpm
-[root@www ~]#&nbsp;rpm -ivh epel-release-5-4.noarch.rpm
+[root@www ~]# wget http://soft.bootf.com/rpm/epel-release-5-4.noarch.rpm
+[root@www ~]# rpm -ivh epel-release-5-4.noarch.rpm
 ```
 
 <font color="RED">注：网上大部分资料均是人云亦云要求yum使用RPMForge源。但经过VPS管理百科实际测试，此源里不包含memcached包，因此无法正常安装。按照VPS管理百科提供的源与方法安装即可。</font>
