@@ -18,7 +18,7 @@ categories:
 [root@www ~]#&nbsp;rpm -ivh epel-release-5-4.noarch.rpm
 </pre>
 
-<COLOR="RED">注：网上大部分资料均是人云亦云要求yum使用RPMForge源。但经过VPS管理百科实际测试，此源里不包含memcached包，因此无法正常安装。按照VPS管理百科提供的源与方法安装即可。</COLOR>
+<font color="RED">注：网上大部分资料均是人云亦云要求yum使用RPMForge源。但经过VPS管理百科实际测试，此源里不包含memcached包，因此无法正常安装。按照VPS管理百科提供的源与方法安装即可。</font>
 
 <STRONG>2、查看已经安装的源</STRONG>
 <!--more-->
@@ -42,9 +42,9 @@ repolist: 20,115
 
 <STRONG>3、yum安装Memcache服务器与php扩展</STRONG>
 <!--more-->
-<pre class="brush: text" line="1">
+```vim
 [root@www ~]# yum install memcached php-pecl-memcache
-</pre>
+```
 此时应该能正常安装这两个包，而不出现无法找到的情况。
 
 <STRONG>4、安装成功后，检测php是否正常加载了memcache模块：</STRONG>

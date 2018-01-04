@@ -35,7 +35,7 @@ permalink: /projects/
   * 多人实时对战
 
 #### Crazyant
-* Started: 2014年6月-2016年11月
+* Started: 2015年5月初-2016年11月11日
 * Website: [www.crazyant.com](http://www.crazyant.com)
    * 休闲游戏开发工作室
    * 统一的、共用的微服务架构的服务端
