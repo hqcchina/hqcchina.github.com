@@ -13,16 +13,16 @@ categories:
 
 <STRONG>1、由于CentOS系统默认源没有memcache安装包，因此需要导入第三方的源。执行如下两条命令：</STRONG>
 <!--more-->
-<pre class="brush: text" line="1">
+```bash
 [root@www ~]#&nbsp;wget http://soft.bootf.com/rpm/epel-release-5-4.noarch.rpm
 [root@www ~]#&nbsp;rpm -ivh epel-release-5-4.noarch.rpm
-</pre>
+```
 
 <font color="RED">注：网上大部分资料均是人云亦云要求yum使用RPMForge源。但经过VPS管理百科实际测试，此源里不包含memcached包，因此无法正常安装。按照VPS管理百科提供的源与方法安装即可。</font>
 
 <STRONG>2、查看已经安装的源</STRONG>
 <!--more-->
-```vim
+```bash
 [root@www ~]# yum repolist
 Loaded plugins: fastestmirror
 Loading mirror speeds from cached hostfile
@@ -48,18 +48,16 @@ repolist: 20,115
 此时应该能正常安装这两个包，而不出现无法找到的情况。
 
 <STRONG>4、安装成功后，检测php是否正常加载了memcache模块：</STRONG>
-<!--more-->
-<pre class="brush: text" line="1">
+```bash
 [root@www ~]# php -m|grep memcache
 memcache
-</pre>
+```
 返回了“memcache”表示已经安装。
 
 <STRONG>5、设置memcached服务开机自动启动</STRONG>
-<!--more-->
-<pre class="brush: text" line="1">
+```bash
 [root@www ~]#&nbsp;chkconfig --level 2345 memcached on
-</pre>
+```
 
 <STRONG>6、启动memcached服务并重启nginx服务</STRONG>
 <!--more-->
@@ -74,8 +72,7 @@ memcache
 
 注意：php里的fastcgi服务其实就是php-fpm
 如果以上重启fastcgi方式无效的话可以试一下以下办法：
-<!--more-->
-<pre class="brush: text" line="1">
+```vim
 php 5.3.3 下的php-fpm 不再支持 php-fpm 以前具有的 /usr/local/php/sbin/php-fpm (start|stop|reload)等命令，需要使用信号控制：
 master进程可以理解以下信号
 INT, TERM 立刻终止
@@ -89,14 +86,13 @@ php-fpm 重启：
 kill -USR2 `cat /var/run/php-fpm/php-fpm.pid`
 查看php-fpm进程数：
 ps aux | grep -c php-fpm
-</pre>
+```
 
 <STRONG>7、测试php支持memcache是否正常</STRONG>
 在apache的网站根目录建立 memcache.php 文件
-<!--more-->
-<pre class="brush: text" line="1">
+```bash
 vi memcache.php
-</pre>
+```
 内容如下：
 ```php
 <?php
@@ -113,14 +109,12 @@ echo $result;
 Memcached的默认端口为11211，因此在php中使用此端口即可。下面顺便给出个清除memcache所有缓存内容的方法：
 
 执行：
-<!--more-->
-<pre class="brush: text" line="1">
+```bash
 [root@www ~]# nc localhost 11211
-</pre>
+```
 
 然后输入：
-<!--more-->
-<pre class="brush: text" line="1">
+```bash
 flush_all
 quit
-</pre>
+```
