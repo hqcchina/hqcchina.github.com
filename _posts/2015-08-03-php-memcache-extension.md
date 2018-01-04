@@ -22,7 +22,7 @@ categories:
 
 <STRONG>2、查看已经安装的源</STRONG>
 <!--more-->
-<pre class="brush: text" line="1">
+```vim
 [root@www ~]# yum repolist
 Loaded plugins: fastestmirror
 Loading mirror speeds from cached hostfile
@@ -37,12 +37,12 @@ epel Extra Packages for Enterprise Linux 5 - i386 5,579
 extras CentOS-5 - Extras 282
 updates CentOS-5 - Updates 455
 repolist: 20,115
-</pre>
+```
 能够找到epel包，说明安装成功。
 
 <STRONG>3、yum安装Memcache服务器与php扩展</STRONG>
 <!--more-->
-```vim
+```bash
 [root@www ~]# yum install memcached php-pecl-memcache
 ```
 此时应该能正常安装这两个包，而不出现无法找到的情况。
@@ -98,8 +98,7 @@ ps aux | grep -c php-fpm
 vi memcache.php
 </pre>
 内容如下：
-<!--more-->
-<pre class="brush: text" line="1">
+```php
 <?php
 $memcache = new Memcache();
 $memcache->connect('127.0.0.1', 11211);
@@ -108,7 +107,7 @@ $result = $memcache->get('key');
 unset($memcache);
 echo $result;
 ?>
-</pre>
+```
 如果一切正常，访问此页面，应该正常返回“Memcache test successful”，至此，Memcached与php扩展memcache安装成功。
 
 Memcached的默认端口为11211，因此在php中使用此端口即可。下面顺便给出个清除memcache所有缓存内容的方法：
