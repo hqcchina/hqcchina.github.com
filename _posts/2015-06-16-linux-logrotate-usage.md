@@ -12,8 +12,7 @@ categories:
 logrorate程序是一个日志文件管理工具，可以用来分割日志文件，删除旧的日志文件，并创建新的日志文件，起到“转储”作用。配置CRON更可以做按日期分割整个日志文件为各个小文件！！！
 
 logrorate是基于CRON来运行的，其脚本是「/etc/cron.daily/logrotate」：
-<!--more-->
-<pre class="brush: shell" line="1">
+```bash
 #!/bin/sh
 
 /usr/sbin/logrotate /etc/logrotate.conf
@@ -22,11 +21,10 @@ if [ $EXITVALUE != 0 ]; then
     /usr/bin/logger -t logrotate "ALERT exited abnormally with [$EXITVALUE]"
 fi
 exit 0
-</pre>
+```
 
 实际运行时，logrotate会调用配置文件「/etc/logrotate.conf」：
-<!--more-->
-<pre class="brush: conf" line="1">
+```vim
 # see "man logrotate" for details
 # rotate log files weekly
 weekly
@@ -52,7 +50,7 @@ include /etc/logrotate.d
 }
 
 # system-specific logs may be also be configured here.
-</pre>
+```
 
 简单说明：  
 weekly : 所有的日志文件每周转储一次，也可以是每日daily或每月monthly；  
@@ -70,8 +68,7 @@ dateext : 表示以日期作为后缀，默认以数字1、2、3等作为后缀�
 
 ## logrotate演示
 按天保存一周的Nginx日志压缩文件，配置文件为「/etc/logrotate.d/nginx」：
-<!--more-->
-<pre class="brush: conf" line="1">
+```vim
 /usr/local/nginx/logs/*.log {
     daily
     dateext
@@ -82,29 +79,23 @@ dateext : 表示以日期作为后缀，默认以数字1、2、3等作为后缀�
         kill -USR1 `cat /var/run/nginx.pid`
     endscript
 }
-</pre>
+```
 如果你等不及CRON，可以通过如下命令来手动执行：
-<!--more-->
-<pre class="brush: shell" line="0">
-# logrotate -f /etc/logrotate.d/nginx
-</pre>
+`# logrotate -f /etc/logrotate.d/nginx`
 当然，正式执行前最好通过Debug选项来验证一下，这对调试也很重要：
-<!--more-->
-<pre class="brush: shell" line="0">
-# logrotate -d -f /etc/logrotate.d/nginx
-</pre>
+`# logrotate -d -f /etc/logrotate.d/nginx`
+
 BTW：类似的还有Verbose选项，这里就不多说了。
 
 logrotate命令格式：
-<!--more-->
-<pre class="brush: shell" line="1">
+```bash
 logrotate [OPTION...] <configfile>
 -d, --debug ：debug模式，测试配置文件是否有错误。
 -f, --force ：强制转储文件。
 -m, --mail=command ：发送日志到指定邮箱。
 -s, --state=statefile ：使用指定的状态文件。
 -v, --verbose ：显示转储过程。
-</pre>
+```
 
 ## logrotate问答
 ### 问题：sharedscripts的作用是什么？
@@ -118,8 +109,7 @@ logrotate [OPTION...] <configfile>
 ### 问题：为什么生成日志的时间是凌晨四五点？
 
 前面我们说过，Logrotate是基于CRON运行的，所以这个时间是由CRON控制的，具体可以查询CRON的配置文件「/etc/crontab」，可以手动改成如23:59等时间执行：
-<!--more-->
-<pre class="brush: shell" line="1">
+```vim
 SHELL=/bin/bash
 PATH=/sbin:/bin:/usr/sbin:/usr/bin
 MAILTO=root
@@ -130,7 +120,7 @@ HOME=/
 59 23 * * * root run-parts /etc/cron.daily
 22 4 * * 0 root run-parts /etc/cron.weekly
 42 4 1 * * root run-parts /etc/cron.monthly
-</pre>
+```
 如果使用的是新版CentOS，那么配置文件为：/etc/anacrontab。
 
 ### 问题：如何告诉应用程序重新打开日志文件？
