@@ -26,7 +26,7 @@ Jekyll生成的静态网页所以不能使用类似于Wordpress的插件提供�
 基于本主题搭建博客：
 ===
 
-1 Fork本项目
-2 删除_posts、files、download目录下的所有内容
-3 更改CNAME、配置等个人信息
-4 提交并推送至自己GitHub项目的master分支
+1. Fork本项目  
+2. 删除_posts、files、download目录下的所有内容  
+3. 更改CNAME、配置等个人信息  
+4. 提交并推送至自己GitHub项目的master分支  
