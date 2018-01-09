@@ -7,14 +7,14 @@ categories:
 ---
 
 今天在网上看到有人发表了一篇关于一个无意义而刁钻的笔试题，如
-```c++
+```cpp
 #include <stdio>
 
 int main( )
 {
-	http://www.yunjing.me
-	printf("http://www.yunjing.me\n");
-	return 0;
+    http://www.yunjing.me
+    printf("http://www.yunjing.me\n");
+    return 0;
 }
 ```
 让分析这段代码是否存在问题，若有则指出问题所在。
@@ -24,8 +24,8 @@ int main( )
 package main
 
 func main() {
-	http://www.yunjing.me
-	println("http://www.yunjing.me")
+    http://www.yunjing.me
+    println("http://www.yunjing.me")
 }
 ```
 
