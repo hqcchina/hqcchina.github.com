@@ -12,7 +12,7 @@ categories:
 
 使用cat的方法
 
-```shell
+```bash
 $ mv /etc/php-fpm.d/www.conf /etc/php-fpm.d/www.conf.orig
 $ cat <<EOFFPMD> /etc/php-fpm.d/www.conf
 [www]
@@ -47,7 +47,7 @@ EOFFPMD
 
 使用tee的方法
 
-```shell
+```bash
 $ sudo tee /etc/yum.repos.d/docker.repo <<-'EOF'
 [dockerrepo]
 name=Docker Repository

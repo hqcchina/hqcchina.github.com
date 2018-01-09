@@ -1,12 +1,23 @@
 <script type="text/javascript">
     function OnClickNewPost()
     {
+        var zeroize = function (value, length) {
+            if (!length) length = 2;
+            value = String(value);
+
+            for (var i = 0, zeros = ''; i < (length - value.length); i++) {
+                zeros += '0';
+            }
+
+            return zeros + value;
+        };
+
         var title = prompt("Please enter title of your post");
         if (title!=null){
             title = title.replace(" ", "-");
             var currentdate = new Date();
             var urlNewPage = "{{ site.newsourceroot }}?filename=_posts/" 
-                + currentdate.getFullYear() + "-" + (currentdate.getMonth()+1) + "-" + currentdate.getDate() + "-" + title + ".md";
+                + currentdate.getFullYear() + "-" + zeroize(currentdate.getMonth()+1) + "-" + zeroize(currentdate.getDate()) + "-" + title + ".md";
                 
             var defaultText =  [
                 '---',

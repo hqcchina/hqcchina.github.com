@@ -11,6 +11,6 @@ $ docker ps -q -a | xargs docker rm
 
 移除所有none名称的镜像 
 
-```shell
+```bash
 $ docker rmi $(docker images | grep "^<none>" | awk '{print $3}') 
 ```
