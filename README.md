@@ -19,9 +19,9 @@
 
 Jekyll生成的静态网页所以不能使用类似于Wordpress的插件提供功能，所以使用Javascript方式实现。
 
-* **评论**：[多说](http://duoshuo.com) 符合国内使用特性，支持主流社区帐号；后续版本会支持Google、Twitter等。
+* **评论**：[Disqus](http://disqus.com) 无法在国内环境下使用，但目前多说已经关闭，暂时还未找到更合适的替代品。
 
-* **分享**：[Jiathis](http://www.jiathis.com/) 国内比较成熟的分享工具。
+* **分享**：[百度分享](http://share.baidu.com/) 符合国内使用特性，支持主流社交平台。
 
 基于本主题搭建博客：
 ===
