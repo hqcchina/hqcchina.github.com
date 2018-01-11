@@ -23,13 +23,13 @@ permalink: /about/
 
 #### 软硬环境
 
-* 操作系统：Mac OS X && Windows 7
+* 操作系统：Mac OS X && Windows 10
 
-* Shell: putty、ssh
+* Shell: putty、ssh、XShell
 
 * 编辑器：VIM && Sublime Text
 
-* IDE：Visual Studio && Xcode && Eclipse
+* IDE：Visual Studio && Xcode
 
 * 浏览器：Chrome && Safari
 
