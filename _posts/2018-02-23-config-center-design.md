@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 分布式配置中心的设计与选型
+title: 配置中心的设计与选型
 comments: true
 categories:
  - 配置中心
