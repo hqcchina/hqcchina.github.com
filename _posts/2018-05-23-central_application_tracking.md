@@ -11,7 +11,7 @@ categories:
 
 ## 客户端SDK设计
 
-|| 用途 || 示例 || 对应接口 ||
+|: 用途 :|: 示例 :|: 对应接口 :|
 | 一段代码执行时间 | url/sql响应时间 | Transaction |
 | 一段代码执行次数 | Exception出现次数 | Event |
 | 定时执行某些代码 | 分钟粒度CPU,IO | HeartBeat |
