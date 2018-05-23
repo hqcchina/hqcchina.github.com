@@ -28,3 +28,5 @@ categories:
 
 ### 展示
 
+## 参考链接
+[开源分布式监控 CAT 系统的高可用实践](http://www.infoq.com/cn/presentations/the-practice-of-open-source-distributed-monitoring-cat-system?utm_source=infoq&utm_medium=videos_homepage&utm_campaign=videos_row2)
