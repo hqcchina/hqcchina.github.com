@@ -93,14 +93,15 @@ Dapper可以找出性能瓶颈，但是并不一定能准确定位到根本原�
 Dapper的设计主要是针对在线服务的系统，尤其是一个用户请求的系统行为，但是离线的情况下，则不能直接使用，需要一些人工的关联和干预行为。
 
 ## Dapper的实现
+
 |   名称   |  开发商  | 类型 |   源码地址  |
-| -------- | ------- | ---- | ---------- |
+| ---- | -------- | ----- | --------- |
 |  zipkin  | twitter |  开源  | [https://github.com/openzipkin/zipkin](https://github.com/openzipkin/zipkin) |
 | pinpoint | naver   |  开源  | [https://github.com/naver/pinpoint](https://github.com/naver/pinpoint) |
 | appdash  | sourcegraph | 开源 | [https://github.com/sourcegraph/appdash](https://github.com/sourcegraph/appdash) |
 | cat | 大众点评 | 开源 | [https://github.com/dianping/cat](https://github.com/dianping/cat) |
 | hydra | 京东 | 开源 | [https://github.com/odenny/hydra](https://github.com/odenny/hydra) |
-| 鹰眼 | 阿里巴巴 | 闭源 |  |
+| 鹰眼 | 阿里巴巴 | 闭源 | - |
 
 ## 大众点评的cat实现参考
 
