@@ -100,7 +100,7 @@ Dapper的设计主要是针对在线服务的系统，尤其是一个用户请�
 | appdash  | sourcegraph | 开源 | [https://github.com/sourcegraph/appdash](https://github.com/sourcegraph/appdash) |
 | cat | 大众点评 | 开源 | [https://github.com/dianping/cat](https://github.com/dianping/cat) |
 | hydra | 京东 | 开源 | [https://github.com/odenny/hydra](https://github.com/odenny/hydra) |
-| 鹰眼 | 阿里巴巴 | 闭源 | - |
+| 鹰眼 | 阿里巴巴 | 闭源 |  |
 
 ## 大众点评的cat实现参考
 
