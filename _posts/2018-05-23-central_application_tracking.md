@@ -5,6 +5,7 @@ comments: true
 excerpt: true
 categories:
  - 监控
+ - APM
 ---
 
 在2010年, Google发表了一篇名为"Dapper, a Large-Scale Distributed Systems Tracing Infrastructure"的论文，在论文中介绍了Google在生产环境中大规模分布式系统下的跟踪系统Dapper的设计和使用经验。
@@ -122,3 +123,4 @@ Dapper的设计主要是针对在线服务的系统，尤其是一个用户请�
 [Dapper, a Large-Scale Distributed Systems Tracing Infrastructure](https://ai.google/research/pubs/pub36356)  
 [开源分布式监控 CAT 系统的高可用实践](http://www.infoq.com/cn/presentations/the-practice-of-open-source-distributed-monitoring-cat-system?utm_source=infoq&utm_medium=videos_homepage&utm_campaign=videos_row2)  
 [大规模分布式系统的跟踪系统：Dapper设计给我们的启示](https://blog.csdn.net/liumiaocn/article/details/80657661)  
+[全链路监控（一）：方案概述与比较](https://juejin.im/post/5a7a9e0af265da4e914b46f1)  
