@@ -94,7 +94,7 @@ Dapper的设计主要是针对在线服务的系统，尤其是一个用户请�
 
 ## Dapper的实现
 |   名称   |  开发商  | 类型 |   源码地址  |
-| -------- | --------| ----- | ---------- |
+| -------- | ------- | ---- | ---------- |
 |  zipkin  | twitter |  开源  | [https://github.com/openzipkin/zipkin](https://github.com/openzipkin/zipkin) |
 | pinpoint | naver   |  开源  | [https://github.com/naver/pinpoint](https://github.com/naver/pinpoint) |
 | appdash  | sourcegraph | 开源 | [https://github.com/sourcegraph/appdash](https://github.com/sourcegraph/appdash) |
