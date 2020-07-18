@@ -53,7 +53,7 @@ permalink: /about/
 
 花点时间浏览或许能发现你所需要的^\_^
 
-* <a href='https://github.com/huangqingcheng'>https://github.com/huangqingcheng</a>
+* <a href='https://github.com/hqcchina'>https://github.com/hqcchina</a>
 
 
 #### 关于版权
