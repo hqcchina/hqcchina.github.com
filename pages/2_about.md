@@ -16,7 +16,7 @@ permalink: /about/
 
 * 喜欢\*nix、开源、技术宅
 
-* 主要开发语言：Go、Java、C/C++、Node.js
+* 主要开发语言：Go、C#、Java、C/C++、Node.js
 
 * 数据库：MongoDB、Redis、InfluxDB 及 MySQL/MariaDB
 
